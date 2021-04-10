@@ -10,19 +10,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class Controller {
+public class TransactionController {
 
     @Autowired
     private TransactionService transactionService;
-
-    @Autowired
-    private StatisticService statisticService;
-
-
-    @GetMapping("/statistics")
-    public ResponseEntity<Statistics> analytics(){
-         return null;
-    }
 
     @PostMapping("/transactions")
     public ResponseEntity<HttpStatus> add(@RequestBody final Transaction transaction) {
